@@ -129,3 +129,44 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* ---- Responsive layout for phones / narrow screens ---- */
+@media only screen and (max-width: 700px) {
+  /* Stack side-by-side table columns into a single column */
+  table td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding: 12px !important;
+  }
+
+  /* Keep images and videos centered and at a reasonable size */
+  td img,
+  td video {
+    max-width: 300px !important;
+    width: auto !important;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Experience cards: one per row instead of two */
+  .exp-grid > div {
+    width: 100% !important;
+  }
+
+  /* Keep the small institution logos at their intended size */
+  .exp-grid img {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: inline;
+    margin: 0;
+  }
+
+  /* Slightly smaller name on very narrow screens */
+  name {
+    font-size: 26px;
+  }
+}
